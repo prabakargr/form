@@ -3,37 +3,51 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" type="text/css" href="reset.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style.css">
 	<title></title>
 </head>
 <body>
      <div class="container mt-5">
-        <h5 class="text-center pt-5 pb-3">Sign Up</h5>
-     	  <form>
-              <div class="row">
-                  <div class="col">
-                     <input type="text" id="ipfname" class="form-control" placeholder="First name">
-                     <span id="fname"></span>
+       <form onsubmit="return false">        
+          <h5 class="text-center pt-5 pb-3">Sign Up</h5>
+             <div class="row">
+                 <div class="col-md-6">
+                      <div class="form-group">
+                          <input type="text" id="ipfname" class="form-control" placeholder="First name">
+                          <span class="text-danger" id="fname"></span>
+                      </div>
+                 </div>
+                 <div class="col-md-6">
+                      <div class=" form-group">
+                          <input type="text" id="iplname" class="form-control" placeholder="Last name">
+                          <span class="text-danger" id="lname"></span>
+                      </div>
+                 </div>
+             </div>
+             <div class="row">
+                  <div class="col-md-12">
+                       <div class="form-group">
+                           <input type="email" class="form-control" id="ipmail" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                           <span class="text-danger" id="mail"></span>
+                       </div>
                   </div>
-                  <div class="col">
-                     <input type="text" id="iplname" class="form-control" placeholder="Last name">
-                     <span id="lsname"></span>
-                   </div>
-              </div>
-              <div class="form-group mt-2">
-                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              </div>
-              <div class="form-group">
-                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-              <div class="form-group">
-                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re-Enter Password">
-              </div>
-              <div class="row">
-                   <div class="col-5">
-                   	   <select class="form-control">
+             </div>
+             <div class="row">
+                 <div class="col-md-12">
+                      <div class="form-group">
+                          <input type="password" id="ippass" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          <span class="text-danger" id="pass"></span>
+                      </div>
+                      <div class="form-group">
+                          <input type="password" id="iprepass" class="form-control" id="exampleInputPassword1" placeholder="Re-Enter Password">
+                          <span class="text-danger" id="repass"></span>
+                      </div>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-6">
+                     <select class="form-control" id="ipbmonth">
                              <option>Birth Month</option>
                              <option>1</option>
                              <option>2</option>
@@ -48,29 +62,54 @@
                              <option>11</option>
                              <option>12</option>
                        </select>
-                   </div>
-                   <div class="col-3">
-                     <input type="text" class="form-control" placeholder="Date">
-                  </div>
-                  <div class="col-4">
-                  	  <input type="text" class="form-control" placeholder="Year"> 
-                  </div>
-              	
-              </div>
-              <div class="mt-2">
-              	  <select class="form-control">
+                       <span class="text-danger" id="bmonth"></span>
+                 </div>
+                 <div class="col-6 col-md-3">
+                      <input type="text" id="ipdate" class="form-control" placeholder="Date">
+                      <span class="text-danger" id="bdate"></span>
+                 </div>
+                 <div class="col-6 col-md-3">
+                      <input type="text" id="ipyear" class="form-control" placeholder="Year">
+                      <span class="text-danger" id="byear"></span>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-12 mt-3" id="ipgender">
+                     <select class="form-control">
                              <option>Gender</option>
                              <option>Male</option>
                              <option>Female</option>
                              <option>Others</option>
                        </select>
-              </div>
-              <div class="text-center mt-5 pb-5">
-              	   <button class="btn btn-primary" onclick="notifyFunction()">Continue</button>
-              </div>
-          </form> 
-     </div>
+                       <span class="text-danger" id="gender"></span>
+                 </div>
+             </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             <div class="row">
+                  <div class="col-md-12">
+                       <div class="text-center mt-5 pb-5">
+                           <button class="btn btn-primary" onclick="notifyFunction()">Continue</button>
+                       </div>
+                  </div>
+             </div>
+          </form>
+     </div>
 
 
 
